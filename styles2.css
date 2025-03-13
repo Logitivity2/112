@@ -1,0 +1,32 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+.image-container {
+  width:390px;
+  height:230px;
+  position: relative;
+  margin-left:0px auto;
+  border: 1px solid #73AD21;
+  display: inline-block;
+}
+
+.image-container video {
+  display: inline-block;
+  border-radius:0px;
+  width:100%;	
+  height:100%;		
+  object-fit: fill;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: none; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 24px; 
+  text-align: center;

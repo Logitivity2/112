@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<title>112</title>
+
+<div style="background-color: white;margin-left: 10px">
+
+
+<a style='display:inline-block;text-decoration: none;'; href="Khome.html">
+         <p style='font-size:18px;color:rgb(0, 153, 153)'><b>Back to Kinematics Home</b></p></a>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<p style='display:inline-block;text-decoration: none;font-size:18px;color:rgb(0, 153, 153)'>
+         2 Dimensional Motion - Demonstration</p>
+
+
+</div>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+
+!function(){var e={};async function t(){"use strict";canvas;var t,i,o,s,r,a,l,n,p,c,h,u,f,d,_,b,y,m,v,g=canvas();function x(e,t=0){return Number(e.toFixed(t))}async function w(e){var t,i,o;for(p.visible=!0,e.disabled=!0,u.text="0.00",l.clear_trail(),n.clear_trail(),l.pos=vector(1["-u"]()["*"](1),2,0),n.pos=vector(1["-u"]()["*"](1),2,0),await sleep(.5),p.visible=!1,m=!0,p.visible=!1,t=3.5,i=0,o=.005;m;)await rate(50),i=i["+"](o),u.text=x(i["*"](100))["/"](100),l.pos.y[">"](c.pos.y["+"](.07))&&(l.pos=vec(1["-u"]()["*"](1)["+"](t["*"](i)),2["-"](1["*"](.5)["*"](9.8)["*"](pow(i,2))),0)),n.pos.y[">"](c.pos.y["+"](.07))&&(n.pos=vec(1["-u"]()["*"](1),2["-"](1["*"](.5)["*"](9.8)["*"](pow(i,2))),0)),l.pos.y["<="](c.pos.y["+"](.07))&&n.pos.y["<="](c.pos.y["+"](.07))&&(m=!1,y.disabled=!1);v.text="<br><br><i>The red ball is dropped from the platform while the green ball is pushed off, yet both hit<br> the ground at the same time.<br><br>Thus, all falling objects accelerate vertically at the same rate even if they have some level<br> of horizontal motion.<br><br>Thus we can say, in the absence of external forces such as air resistance, an object's<br>trajectory is based on its vertical and horizontal velocities, which operate independently<br>of each other.<br><br>Use this principle to answer the questions that follow in the next exercise.<br><br><b><a href='2d2.html'><b>Click Here to proceed to Next Exercise</b></a>"}t=ρσ_list_decorate(["3.2","glowscript"]),Array.prototype["+"]=function(e){return this.concat(e)},Array.prototype["*"]=function(e){return __array_times_number(this,e)},window.__GSlang="vpython",i=GSprint,o=range,s="__main__",r=pytype,(0,e.pythonize.strings)(),g.width=550,g.height=480,g.userzoom=!1,g.userspin=!1,g.userpan=!1,g.align="left",a=3,g.camera.pos=vec(0,1,a),g.camera.axis=vec(0,0,1["-u"]()["*"](a)),g.resizable=!1,l=ρσ_interpolate_kwargs.call(this,sphere,[ρσ_desugar_kwargs({pos:vector(1["-u"]()["*"](1),2,0),radius:.05,color:color.green,make_trail:!0})]),n=ρσ_interpolate_kwargs.call(this,sphere,[ρσ_desugar_kwargs({pos:vector(1["-u"]()["*"](1),2,0),radius:.05,color:color.red,make_trail:!0})]),p=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(1["-u"]()["*"](1),1.93,0),size:vector(.25,.01,.25)})]),c=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(0,.2,0),size:vector(3,.01,.25)})]),h=ρσ_interpolate_kwargs.call(this,label,[ρσ_desugar_kwargs({pos:vec(1["-u"]()["*"](.3),1["-u"]()["*"](.5),0),text:"TIME:",xoffset:0,yoffset:0,space:0,height:16,box:!1,opacity:0,font:"sans"})]),u=ρσ_interpolate_kwargs.call(this,label,[ρσ_desugar_kwargs({pos:vec(0,1["-u"]()["*"](.5),0),text:"0.00",xoffset:0,yoffset:0,space:0,height:16,box:!1,opacity:0,font:"sans"})]),f="1. If the ball has a horizontal velocity of  1.5 m/s , how far did it travel horizontally?  ",d="2. From what height was the ball dropped:",_=ρσ_list_decorate([.9,1.76]),b=ρσ_interpolate_kwargs.call(this,wtext,[ρσ_desugar_kwargs({text:"<i>The simulation shows  horizontal and vertical motion functioning independently</i><br><br>"})]),y=ρσ_interpolate_kwargs.call(this,button,[ρσ_desugar_kwargs({text:"Run",bind:w,color:color.green["*"](.7)})]),m=!1,v=ρσ_interpolate_kwargs.call(this,wtext,[ρσ_desugar_kwargs({text:""})]),w.__argnames__||Object.defineProperties(w,{__argnames__:{value:["b"]},__module__:{value:null}})}e.pythonize={},function(){function t(){if(t=set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" ")),arguments.length)i=arguments[0]?Array.prototype.slice.call(arguments):null;else{var e;i=((e=ρσ_set()).jsset.add("split"),e.jsset.add("replace"),e)}i&&(t=t.difference(set(i)));var t,i,o,s=t;for(var r of s="function"==typeof s[Symbol.iterator]?s instanceof Map?s.keys():s:Object.keys(s))o=r,(ρσ_expr_temp=String.prototype)["number"==typeof o&&o<0?ρσ_expr_temp.length+o:o]=(ρσ_expr_temp=ρσ_str.prototype)["number"==typeof o&&o<0?ρσ_expr_temp.length+o:o]}t.__module__||Object.defineProperties(t,{__module__:{value:"pythonize"}}),e.pythonize.strings=t}(),t.__module__||Object.defineProperties(t,{__module__:{value:null}}),$(function(){window.__context={glowscript_container:$("#glowscript").removeAttr("id")},t()})}();
+
+//--><!]]></script>
+</div>
+
+</html>
