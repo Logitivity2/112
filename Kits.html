@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+  <style>
+ 
+
+    .top-nav {
+      background-color: white;
+      margin: 10px;
+    }
+
+    .top-nav img {
+      vertical-align: middle;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+    }
+
+    .top-nav p {
+      display: inline-block;
+      font-size: 18px;
+      color: rgb(0, 153, 153);
+      margin: 10px 20px;
+    }
+
+
+    .product-section {
+      margin: 40px auto;
+      max-width: 700px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      text-align: center;
+      
+    }
+
+  
+    .enquire-button {
+      background-color: #009999;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #enquiryFormContainer {
+      display: none;
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      z-index: 1000;
+      max-height: 80%;
+      overflow-y: auto;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      color: rgb(0, 153, 153);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    .close-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      float: right;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: rgb(0, 183, 153);
+      padding: 10px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .total-cost {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    &ensp;<img width="80" height="42" src="112.png">
+    <a href="Home.html" style="margin-left:80px"><p><b>HOME</b></p></a>
+    <a href="Simulations.html" style="margin-left:80px"><p><b>SIMULATED PROBLEM SOLVING</b></p></a>
+    <a href="Kits.html" style="margin-left:80px"><p><b>EXPERIENTIAL LEARNING</b></p></a>
+  </div>
+<hr>
+  <div class="product-section">
+    <h2 style='color:rgb(0, 183, 153)'>Illumination</h2>
+    <p >Explore light, shadows, reflection and refraction with practical setups and visualizations.</p>
+    <video loop autoplay style='width:560px;height:315px;margin-bottom: 20px'>
+      <source src="Videos/HP.mp4" type="video/mp4">
+    </video>
+    <br>
+    <button class="enquire-button" onclick="openForm()">Enquire Now</button>
+  </div>
+
+  <div class="product-section">
+    <h2 style='text-align:center;color:rgb(0, 183, 153)'>Equilibrium</h2>
+    <p>Understand forces, levers, and balance with engaging interactive tools and experiments.</p>
+    <video loop autoplay style='width:560px;height:315px;margin-bottom: 20px'>
+      <source src="Videos/HP.mp4" type="video/mp4">
+    </video>
+    <br>
+    <button class="enquire-button" onclick="openForm()">Enquire Now</button>
+  </div>
+
+  <div id="enquiryFormContainer">
+    <button class="close-button" onclick="closeForm()">X</button>
+    
+    <label for="qtyIllumination">Illumination Quantity</label>
+    <select id="qtyIllumination">
+      <option value="0" selected>0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <label for="qtyEquilibrium">Equilibrium Quantity</label>
+    <select id="qtyEquilibrium">
+      <option value="0" selected>0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <p class="total-cost">Total (excl. shipping): R<span id="totalAmount">0</span></p>
+
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName">
+
+    <label for="email">Email</label>
+    <input type="email" id="email">
+
+    <label for="phone">Phone</label>
+    <input id="phone" type="tel">
+
+    <label for="location">City, State, Country</label>
+    <input type="text" id="location">
+
+    <label for="address">Delivery Address</label>
+    <textarea id="address"></textarea>
+
+    <button class="enquire-button" style="margin-top: 20px;">Send Enquiry</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 1-1-2. All rights reserved.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Contact email: <a href="mailto:knowledge@112.com">knowledge@112.com</a>
+      &emsp;&emsp;&emsp;<a href="terms.pdf" target="_blank" style="color:white;text-decoration:underline">Terms & Conditions</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script>
+    const form = document.getElementById("enquiryFormContainer");
+    const totalDisplay = document.getElementById("totalAmount");
+
+    function openForm() {
+      form.style.display = "block";
+      updateTotal();
+    }
+
+    function closeForm() {
+      form.style.display = "none";
+    }
+
+    function updateTotal() {
+      const price = 100; // price per item
+      const qty1 = parseInt(document.getElementById("qtyIllumination").value);
+      const qty2 = parseInt(document.getElementById("qtyEquilibrium").value);
+      const total = (qty1 + qty2) * price;
+      totalDisplay.textContent = total;
+    }
+
+    document.getElementById("qtyIllumination").addEventListener("change", updateTotal);
+    document.getElementById("qtyEquilibrium").addEventListener("change", updateTotal);
+
+    const phoneInput = document.querySelector("#phone");
+    window.intlTelInput(phoneInput, {
+      initialCountry: "za",
+      preferredCountries: ["za", "us", "gb"],
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+  </script>
+</body>
+</html>
+
+
+

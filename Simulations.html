@@ -1,129 +1,244 @@
 <!DOCTYPE html>
-<html>
-
-<title>112</title>
-<div style="background-color: white">
-	&ensp;<img width="80" height="42" src="112.png">
-	<a style='display:inline-block;text-decoration: none;'; href="Home.html">
-         <p style='font-size:18px;color:rgb(0, 153, 153)'><b>&emsp;&emsp;&emsp;&emsp;&emsp;HOME &emsp;&emsp;&emsp;&emsp;</b></p><p><br></p></a>
-
-<a style='display:inline-block;text-decoration: none;'; href="Simulations.html">
-         <p style='font-size:18px;color:rgb(0, 153, 153)'><b>&emsp;&emsp;&emsp;&emsp;&emsp;SIMULATED PROBLEM SOLVING&emsp;&emsp;&emsp;&emsp;<br></b></p><p><br></p></a>
-
-<a style='display:inline-block;text-decoration: none;'; href="Workshops.html">
-         <p style='font-size:18px;color:rgb(0, 153, 153)'><b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;EXPERIENTIAL LEARNING&emsp;&emsp;<br></b></p><p><br></p></a>
-
-
-
-</div>
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Image Overlay with Text</title>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>112</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+
+
+    .top-nav {
+      background-color: white;
+      margin: 10px 10px 10px 10px;
+    }
+
+    .top-nav img {
+      vertical-align: middle;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+    }
+
+    .top-nav p {
+      display: inline-block;
+      font-size: 18px;
+      color: rgb(0, 153, 153);
+      margin: 10px 20px;
+    }
+
+
+    .section-heading {
+      text-align: center;
+      color: rgb(0, 153, 153);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 20px auto 20px auto;
+    }
+
+    .carousel-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+      gap: 10px;
+    }
+
+    .carousel-viewport {
+      width: 495px; /* 75% of 660px */
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      scrollbar-width: none;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-button {
+      font-size: 24px;
+      padding: 10px;
+      background-color: #009999;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .image-containerc {
+      position: relative;
+      width: 495px;
+      height: 278px;
+      flex-shrink: 0;
+      display: block;
+      z-index: -1;
+    }
+
+    .overlay-textb {
+      position: absolute;
+      top: 20%;  /* Position 20% from the top */
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      position: relative;
+      z-index: 1; /* Keep iframe behind text */
+    }
+
+    footer {
+      background-color: rgb(0, 183, 153);
+      padding: 10px 0;
+      text-align: center;
+    }
+
+  </style>
 </head>
 
-	
 <body>
 
+  <div class="top-nav">
+    &ensp;<img width="80" height="42" src="112.png">
+    <a href="Home.html" style="margin-left:80px"><p><b>HOME</b></p></a>
+    <a href="Simulations.html" style="margin-left:80px"><p><b>SIMULATED PROBLEM SOLVING</b></p></a>
+    <a href="Workshops.html" style="margin-left:80px"><p><b>EXPLORATORY REASONING</b></p></a>
+  </div>
 
-<hr><br>
-<h2 style='text-align:center;color:rgb(0, 153, 153)'>Simulated Problem Solving</h2>
-<br>
-<h4 style='text-align:center;color:rgb(0, 153, 153)'>A compendium of simulations focusing on mathematical, spatial, logical & analytical reasoning.<br><br>Click any of the options below to begin. For ages 14 & up.</h2>
-<br><hr><br>
+  <hr>
+  <h2 style='text-align:center;color:rgb(0, 183, 153)'>Simulated Problem Solving</h2>
+  <h4  style='text-align:center;color:rgb(0, 153, 153)'>The Simulated Problem Solving Modules are split into 2 Streams:  Mathematical Reasoning & Scientific Reasoning.<br><br>The Simulated Exercises give practical meaning to abstract concepts and<br>engage learners to reason from first principles in the fields of Mathematics & Physics.<br><br>Although the modules may be accessed independently, it is best to attempt them according to their numbering.<br><br>For ages 13 & up.</h4>
+  <hr>
 
- 
-<h2 style='text-align:center;color:rgb(0, 153, 153)'>MODULES</h2>
-<br>
+  <!-- Section Heading for Carousel 1 -->
+  <div class="section-heading">
+    <strong>MATHEMATICAL REASONING</strong><br><br>
+    A range of simulated exercises that give practical meaning to mathematical concepts. Hone your math skills in a fun interactive way. 
+  </div>
 
+  <!-- Carousel 1 -->
+  <div class="carousel-wrapper">
+    <button class="carousel-button" onclick="moveCarousel('carousel1', -1)">&#8592;</button>
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carousel1">
+        <!-- Entire div with iframe and overlay text wrapped by <a> tag -->
 
-<div style="background-color: white">
+        <a href="Algebra/Ahome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD1.html"></iframe>
+            <div class="overlay-textb">1. Alegbraic Reasoning</div>
+          </div>
+        </a>
+        <a href="Spatial/Shome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD2.html"></iframe>
+            <div class="overlay-textb">2. Functions</div>
+          </div>
+        </a>
+	<a href="Algebra/Ahome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD4.html"></iframe>
+            <div class="overlay-textb">3. Spatial Measurement & Reasoning</div>
+          </div>
+        </a>
+	<a href="Algebra/Ahome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD5.html"></iframe>
+            <div class="overlay-textb">4. Recursive Reasoning & Sequences</div>
+          </div>
+        </a>
+		<a href="Algebra/Ahome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD5.html"></iframe>
+            <div class="overlay-textb">5. Non Linear Functions</div>
+          </div>
+        </a>
+	
+	<a href="Algebra/Ahome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD5.html"></iframe>
+            <div class="overlay-textb">6. Logic</div>
+          </div>
+        </a>
 
-&emsp;&emsp;&emsp;
-
-<a style='display:inline-block; text-decoration: none; color: black;' href="Algebra/Ahome.html">
-
-
-<div class="image-containerc">
-
-<iframe style='width:330px;height:185px' scrolling="no" marginwidth="0" marginheight="0 id="image-containerc" src="IframeD1.html"></iframe>
-
-<div class="overlay-textb">Algebra Fundamentals</div>
-
-</div><p style='width:330px;text-align:center;margin-top:5px'>Simulated exercises that give practical meaning to equations & functions.<br><br><br><br></p></a>
-
-&emsp;&emsp;&emsp;&emsp;&emsp;
-
-<a style='display:inline-block; text-decoration: none; color: black;' href="Kinematics/Khome.html">
-<div class="image-containerc">
-
-<iframe style='width:330px;height:185px' scrolling="no" marginwidth="0" marginheight="0 id="image-containerc" src="IframeD2.html"></iframe>
-
-<div class="overlay-textb">Kinematics</div>
-
-</div><p style='width:330px;text-align:center;margin-top:5px'>Master spatial-temporal reasoning through a myriad of exercises involving moving objects.<br><br><br><br></p></a>
-
-&emsp;&emsp;&emsp;&emsp;&emsp;
-<a style='display:inline-block; text-decoration: none; color: black;' href="Spatial/Shome.html">
-<div class="image-containerc">
-
-<iframe style='width:330px;height:185px' scrolling="no" marginwidth="0" marginheight="0 id="image-containerc" src="IframeD3.html"></iframe>
-
-<div class="overlay-textb">Spatial Reasoning</div>
-
-</div><p style='width:330px;text-align:center;margin-top:5px'>Improve your geometrical ability and spatial reasoning through a system of simulated problems.<br><br><br><br></p></a>
-
-
-</div>
-
-
-<div style="background-color: white">
-
-&emsp;&emsp;&emsp;
-
-<a style='display:inline-block; text-decoration: none; color: black;' href="Trigonometry/Thome.html">
-
-
-<div class="image-containerc">
-
-<iframe style='width:330px;height:185px' scrolling="no" marginwidth="0" marginheight="0 id="image-containerc" src="IframeD4.html"></iframe>
-
-<div class="overlay-textb">Trigonometry</div>
-
-</div><p style='width:330px;text-align:center;margin-top:5px'>Simulated situations in geography that give practical meaning to trigonometry.<br><br><br></p></a>
-
-&emsp;&emsp;&emsp;&emsp;&emsp;
-
-<a style='display:inline-block; text-decoration: none; color: black;' href="Logic/Lhome.html">
-<div class="image-containerc">
-
-<iframe style='width:330px;height:185px' scrolling="no" marginwidth="0" marginheight="0 id="image-containerc" src="IframeD5.html"></iframe>
-
-<div class="overlay-textb">Logical Reasoning</div>
-
-</div><p style='width:330px;text-align:center;margin-top:5px'>Learn the skill of Reasoning from First Principles through a variety of logical exercises and puzzles.<br><br><br></p></a>
-
-&emsp;&emsp;&emsp;&emsp;&emsp;
-<a style='display:inline-block; text-decoration: none; color: black;' href="Higher/Hhome.html">
-<div class="image-containerc">
-
-<img src="Images/comingsoon.png" alt="COMING SOON" width="330" height="185">
-
-<div class="overlay-textb">Higher Order Thinking</div>
-
-</div><p style='width:330px;text-align:center;margin-top:5px'>Exercises that engages one to analyse, synthesize and evaluate data.<br><br><br></p></a>
-
-
-</div>
-
+      </div>
+    </div>
+    <button class="carousel-button" onclick="moveCarousel('carousel1', 1)">&#8594;</button>
+  </div>
 
 <hr>
+  <!-- Section Heading for Carousel 2 -->
+  <div class="section-heading">
+    <strong>SCIENTIFIC REASONING</strong><br><br>
+    Master scientific reasoning through a myriad of exercises and simulations.
+  </div>
 
-<div style="background-color: rgb(0, 183, 153);padding-top:10px;padding-bottom:10px">
-<p style='text-align:center'>&copy; 2025 1-1-2. All rights reserved.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Contact email : <a href="mailto:knowledge@112.com">knowledge@112.com</a> </p>
-</div>
+  <!-- Carousel 2 -->
+  <div class="carousel-wrapper">
+    <button class="carousel-button" onclick="moveCarousel('carousel2', -1)">&#8592;</button>
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carousel2">
+        <!-- Entire div with iframe and overlay text wrapped by <a> tag -->
+        <a href="Spatial/Shome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD2.html"></iframe>
+            <div class="overlay-textb">1. Kinematic Basics</div>
+          </div>
+        </a>
+        <a href="Spatial/Shome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD3.html"></iframe>
+            <div class="overlay-textb">2. Relativity</div>
+          </div>
+        </a>
+        <a href="Logic/Lhome.html">
+          <div class="image-containerc">
+            <iframe src="IframeD3.html"></iframe>
+            <div class="overlay-textb">3. Causal Reasoning</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button class="carousel-button" onclick="moveCarousel('carousel2', 1)">&#8594;</button>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2025 1-1-2. All rights reserved.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Contact email: <a href="mailto:knowledge@112.com">knowledge@112.com</a></p>
+  </footer>
+
+  <script>
+    const positions = {
+      'carousel1': 0,
+      'carousel2': 0
+    };
+
+    function moveCarousel(id, direction) {
+      const carousel = document.getElementById(id);
+      const itemCount = carousel.children.length;
+      const itemWidth = carousel.children[0].offsetWidth;
+
+      positions[id] = (positions[id] + direction + itemCount) % itemCount;
+      const offset = -positions[id] * itemWidth;
+
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+  </script>
 
 </body>
 </html>
+
+
