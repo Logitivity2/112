@@ -110,11 +110,18 @@
 
 <body>
 
+<script>
+  if (window.innerWidth < 600) {
+    alert("This interactive content is not supported on phones. Please use a tablet or computer.");
+    window.location.href = "unsupported.html";
+  }
+</script>
+	
   <div class="top-nav">
     &ensp;<img width="80" height="42" src="112.png">
     <a href="Home.html" style="margin-left:80px"><p><b>HOME</b></p></a>
     <a href="Simulations.html" style="margin-left:80px"><p><b>SIMULATED PROBLEM SOLVING</b></p></a>
-    <a href="Workshops.html" style="margin-left:80px"><p><b>EXPLORATORY REASONING</b></p></a>
+    <a href="Workshops.html" style="margin-left:80px"><p><b>EXPERIENTIAL LEARNING</b></p></a>
   </div>
 
   <hr>
